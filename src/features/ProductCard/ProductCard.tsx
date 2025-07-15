@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { Product } from '../../types';
 import { useAuthStore } from '../../store/authStore';
 import styles from './ProductCard.module.scss';
+import { Button } from '@/shared/ui';
+import { useProductStore } from '@/store/useProductStore';
 
 interface ProductCardProps {
   product: Product;
@@ -10,10 +12,10 @@ interface ProductCardProps {
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { isAuthenticated } = useAuthStore();
+  const addProduct = useProductStore(state => state.addProduct);
 
   const handleAddToCart = () => {
-    // Placeholder for add to cart functionality
-    console.log('Add to cart:', product.id);
+    addProduct(product);
   };
 
   return (
@@ -34,9 +36,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div className={styles.price}>${product.price}</div>
 
         {isAuthenticated && (
-          <button onClick={handleAddToCart} className={styles.addToCartBtn}>
-            Add to cart
-          </button>
+          <Button onClick={handleAddToCart} className={styles.addToCartBtn}>Add to cart</Button>
         )}
       </div>
     </div>

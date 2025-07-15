@@ -5,3 +5,4 @@ export * from './Header';
 export * from './LoginForm';
 export * from './ProductList';
 export * from './ProtectedRoute';
+export * from '../features/Cart';

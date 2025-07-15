@@ -61,12 +61,7 @@
 
 .addToCartBtn {
   width: 100%;
-  background-color: $primary-color;
-  color: white;
-  border: none;
   padding: 0.75rem;
-  border-radius: 4px;
-  cursor: pointer;
   font-size: 0.9rem;
   font-weight: 500;
   transition: background-color 0.3s;
@@ -76,7 +71,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $md) {
   .content {
     padding: 0.75rem;
   }

@@ -110,7 +110,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: $sm) {
   .container {
     padding: 1rem 0.5rem;
   }

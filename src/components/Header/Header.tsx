@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useAuthStore } from '../../store/authStore';
 import styles from './Header.module.scss';
+import { Cart } from '@/features';
 
 export const Header: React.FC = () => {
   const { isAuthenticated, user, logout } = useAuthStore();
@@ -22,6 +23,7 @@ export const Header: React.FC = () => {
         <nav className={styles.nav}>
           {isAuthenticated && user ? (
             <div className={styles.userInfo}>
+              <Cart />
               <span className={styles.userName}>
                 {user.firstName} {user.lastName}
               </span>

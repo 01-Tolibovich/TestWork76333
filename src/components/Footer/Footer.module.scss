@@ -17,7 +17,7 @@
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $md) {
   .container {
     padding: 0.5rem;
   }
