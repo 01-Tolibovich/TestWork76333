@@ -4,7 +4,7 @@ import React from 'react';
 import { useAuthStore } from '../../store/authStore';
 import styles from './Footer.module.scss';
 
-const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
   const { isAuthenticated, user } = useAuthStore();
   const currentYear = new Date().getFullYear();
 
@@ -19,5 +19,3 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
-export default Footer;

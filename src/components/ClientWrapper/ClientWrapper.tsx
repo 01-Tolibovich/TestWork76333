@@ -7,7 +7,7 @@ interface ClientWrapperProps {
   children: React.ReactNode;
 }
 
-const ClientWrapper: React.FC<ClientWrapperProps> = ({ children }) => {
+export const ClientWrapper: React.FC<ClientWrapperProps> = ({ children }) => {
   const { checkAuth } = useAuthStore();
 
   useEffect(() => {
@@ -16,5 +16,3 @@ const ClientWrapper: React.FC<ClientWrapperProps> = ({ children }) => {
 
   return <>{children}</>;
 };
-
-export default ClientWrapper;

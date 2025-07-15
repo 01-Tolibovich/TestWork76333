@@ -4,10 +4,10 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '../../hooks/useAuth';
 import { validateForm } from '../../utils/validation';
-import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 import styles from './LoginForm.module.scss';
+import { LoadingSpinner } from '@/features';
 
-const LoginForm: React.FC = () => {
+export const LoginForm: React.FC = () => {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -116,5 +116,3 @@ const LoginForm: React.FC = () => {
     </div>
   );
 };
-
-export default LoginForm;

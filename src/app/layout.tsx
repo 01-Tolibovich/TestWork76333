@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
-import ClientWrapper from '../components/ClientWrapper/ClientWrapper';
+import { ClientWrapper, Footer, Header } from '@/components';
 
 export const metadata: Metadata = {
   title: 'Shop App',

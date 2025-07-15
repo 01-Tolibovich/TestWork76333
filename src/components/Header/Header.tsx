@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useAuthStore } from '../../store/authStore';
 import styles from './Header.module.scss';
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   const { isAuthenticated, user, logout } = useAuthStore();
 
   const handleLogout = () => {
@@ -39,5 +39,3 @@ const Header: React.FC = () => {
     </header>
   );
 };
-
-export default Header;

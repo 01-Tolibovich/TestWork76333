@@ -8,7 +8,7 @@ interface ProductCardProps {
   product: Product;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { isAuthenticated } = useAuthStore();
 
   const handleAddToCart = () => {
@@ -42,5 +42,3 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     </div>
   );
 };
-
-export default ProductCard;

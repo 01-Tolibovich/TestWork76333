@@ -2,11 +2,10 @@
 
 import React from 'react';
 import { useProducts } from '../../hooks/useProducts';
-import ProductCard from '../ProductCard/ProductCard';
-import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 import styles from './ProductList.module.scss';
+import { LoadingSpinner, ProductCard } from '@/features';
 
-const ProductList: React.FC = () => {
+export const ProductList: React.FC = () => {
   const { products, loading, error, refetch } = useProducts(12);
 
   if (loading) {
@@ -35,5 +34,3 @@ const ProductList: React.FC = () => {
     </div>
   );
 };
-
-export default ProductList;
