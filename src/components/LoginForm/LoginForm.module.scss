@@ -110,6 +110,10 @@
   }
 }
 
+.loading {
+  min-height: min-content;
+}
+
 @media (max-width: $sm) {
   .container {
     padding: 1rem 0.5rem;

@@ -54,7 +54,6 @@ export const LoginForm: React.FC = () => {
     <div className={styles.container}>
       <form onSubmit={handleSubmit} className={styles.form}>
         <h1 className={styles.title}>Login</h1>
-        
         {errors.general && (
           <div className={styles.errorMessage}>
             {errors.general}
@@ -104,13 +103,13 @@ export const LoginForm: React.FC = () => {
           disabled={isLoading}
           className={styles.submitBtn}
         >
-          {isLoading ? <LoadingSpinner /> : 'Login'}
+          {isLoading ? <LoadingSpinner className={styles.loading} /> : 'Login'}
         </button>
         
         <div className={styles.testCredentials}>
           <p>Test credentials:</p>
-          <p><strong>Username:</strong>emilys</p>
-          <p><strong>Password:</strong>emilyspass</p>
+          <p><strong>Username: </strong>emilys</p>
+          <p><strong>Password: </strong>emilyspass</p>
         </div>
       </form>
     </div>

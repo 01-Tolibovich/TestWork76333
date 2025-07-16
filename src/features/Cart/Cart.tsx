@@ -10,6 +10,8 @@ export const Cart = () => {
   const [dropDown, setDropDown] = useState<boolean>(false);
   const products = useProductStore(state => state.products);
 
+  console.log('products in cart store', products);
+  
 
   return (
     <div className={styles.container}>
@@ -17,9 +19,6 @@ export const Cart = () => {
         {products.length !== 0 && <small className={styles.count}>{products.length}</small>}
         <ShoppingCart />
       </Button>
-      {/* {dropDown && (
-        <div className={}>asdasdad</div>
-      )} */}
     </div>
   );
 };
